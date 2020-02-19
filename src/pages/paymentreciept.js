@@ -7,7 +7,6 @@ import Layout from "../components/layout"
 const PaymentReciept = ({ location }) => {
   // destructures the state passed via the payment form component
   const { state } = location
-  console.log(`state in payment Reciept:${JSON.stringify(state,null,2)}`)
   return (
     <Layout>
       <>
@@ -17,7 +16,7 @@ const PaymentReciept = ({ location }) => {
         <h2 style={{ textAlign: "center" }}>
           Here's your payment reciept information:
         </h2>
-        {state !== null ? (
+        {state === null ? (
           <h2> No payment information is present.</h2>
         ) : (
           <pre>{JSON.stringify(state.paymentInfo, null, 2)}</pre>
