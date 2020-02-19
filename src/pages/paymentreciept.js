@@ -7,16 +7,17 @@ import Layout from "../components/layout"
 const PaymentReciept = ({ location }) => {
   // destructures the state passed via the payment form component
   const { state } = location
+  
   return (
     <Layout>
       <>
         <h1 style={{ textAlign: "center" }}>
-          Your payment for Awesome dog chew toy for $2 was sucessfull
+          Your payment for Awesome dog chew toy for $2 was successful
         </h1>
         <h2 style={{ textAlign: "center" }}>
-          Here's your payment reciept information:
+          Here's your payment receipt information:
         </h2>
-        {state === null ? (
+        {!state ? (
           <h2> No payment information is present.</h2>
         ) : (
           <pre>{JSON.stringify(state.paymentInfo, null, 2)}</pre>
