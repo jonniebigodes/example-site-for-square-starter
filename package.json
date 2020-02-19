@@ -1,0 +1,54 @@
+{
+  "name": "gatsby-starter-square",
+  "private": true,
+  "description": "A simplified bare-bones starter for setting up Square Payments in a Gatsby project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "jonniebigodes <jonniebigodes@hotmail.com>",
+  "scripts": {
+    "build": "run-p build:**",
+    "build:app": "gatsby build",
+    "build:lambda": "netlify-lambda -c ./config/webpack.functions.js build functions",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "run-p start:**",
+    "start:app": "npm run develop",
+    "start:lambda": "netlify-lambda -c ./config/webpack.functions.js serve functions",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.19.7",
+    "gatsby-plugin-manifest": "^2.2.41",
+    "gatsby-plugin-offline": "^3.0.34",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "serverless-http": "^2.3.1",
+    "square-connect": "^2.20200122.0"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby",
+    "starter",
+    "minimal",
+    "gatsby-starter",
+    "Square Payments"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonniebigodes/gatsby-starter-square"
+  },
+  "bugs": {
+    "url": "https://github.com/jonniebigodes/gatsby-starter-square/issues"
+  }
+}
