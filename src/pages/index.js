@@ -43,7 +43,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <h1 style={{textAlign:'center'}}>Thank you for purchasing </h1>
-      <h2 style={{textAlign:'center'}}>Awesome dog chew toy for $1</h2>
+      <h2 style={{textAlign:'center'}}>Awesome dog chew toy for $2</h2>
       {
         squareStatus==="notLoaded" && (
           <>
@@ -56,7 +56,7 @@ const IndexPage = () => {
         <p>Failed to load SquareSDK, Please refresh the page</p>
       )}
       {squareStatus === "SUCCESS" && (
-         <PaymentForm paymentForm={window.SqPaymentForm} ammount={1} />
+         <PaymentForm paymentForm={window.SqPaymentForm} ammount={2} />
         
       )}
     </Layout>
