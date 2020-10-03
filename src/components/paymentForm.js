@@ -130,7 +130,7 @@ export default class PaymentForm extends Component {
             paymentNounce: nonce,
           })
           // adjust the endpoint accordingly before deploying
-          axios.post(process.env.NODE_ENV==='development'?'http://localhost:9000/processpay':'https://example-site-for-square-starter.netlify.com/.netlify/functions/processpay',{
+          axios.post(process.env.NODE_ENV==='development'?'http://localhost:9000/processpay':'https://example-site-for-square-starter.netlify.app/.netlify/functions/processpay',{
             paymentAmmount:this.props.ammount*100, 
             currency:"USD",
             cardNounce:nonce
